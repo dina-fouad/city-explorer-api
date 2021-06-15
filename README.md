@@ -1,33 +1,30 @@
 # city-explorer-api
 
 
+
+
 **Author**: dina albarghouthi
-**Version**: 2.0.0
+**Version**: 1.0.0 
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+This is an Express API server.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Clone this repo to your local machine. Open the terminal and run npm i Run npm start
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
-## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
-## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+ExpressJS dotenv library cors library
 
 
-Name of feature: ________________________________
 
-Estimate of time needed to complete: _____
+Name of feature:react and axios
 
-Start time: _____
+Estimate of time needed to complete: 5h
 
-Finish time: _____
+Start time: 2:00
 
-Actual time needed to complete: _____
+Finish time: 8:30
+Actual time needed to complete: 7
+
+https://trello.com/b/BQQU07LZ/axios
+ https://dina12.herokuapp.com/
