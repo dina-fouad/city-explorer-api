@@ -44,12 +44,12 @@ function weatherHandler(req, res) {
 }
 
 
-// let movieUrl = `https://api.themoviedb.org/3/movie/550?api_key=1f883500be7d8b2a082810723cf1abfb&query=seattle`;
+// let movieUrl = `https://api.themoviedb.org/3/search/movie?api_key=1f883500be7d8b2a082810723cf1abfb&query=seattle`;
 function movieHandler(req, res) {
 
     let movieQuery = req.query.city;
     let key = process.env.MOVIE_API_KEY;
-    let movieUrl = `https://api.themoviedb.org/3/movie/550?api_key=${key}&query=${movieQuery}`;
+    let movieUrl = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieQuery}`;
    
     
     axios.get(movieUrl).then(result => {
@@ -82,10 +82,9 @@ class Movie {
         this.overview = item.overview;
         this.average_votes = item.vote_average;
         this.total_votes = item.vote_count;
-        this.image_url = `https://image.tmdb.org/t/p/w500/afkYP15OeUOD0tFEmj6VvejuOcz.jpg`;
+        this.image_url= `https://image.tmdb.org/t/p/w500${item.poster_path}`
         this.popularity = item.popularity;
         this.released_on = item.release_date;
-        
     }
 }
 
