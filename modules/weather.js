@@ -1,13 +1,12 @@
-
 const axios = require('axios');
 
 module.exports = weatherHandler;
 
+
 //localhost:3065/weather?city
 function weatherHandler(req, res) {
 
-
-
+// let weatherUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?city=london&key=75d1bfd7e0f2432f845b070401bf2c97'
     let weatherQuery = req.query.city;
     let key = process.env.WEATHER_API_KEY;
     let weatherUrl = `https://api.weatherbit.io/v2.0/forecast/daily?city=${weatherQuery}&key=${key}`;
@@ -23,6 +22,8 @@ function weatherHandler(req, res) {
             res.status(500).send(`error in weather data ${err}`);
         })
 }
+
+
 
 
 
