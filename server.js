@@ -12,7 +12,6 @@ const PORT = process.env.PORT;
 
 server.use(cors());//my server can get any req from any clinet
 
-
 const weatherHandler = require('./modules/weather.js');
 const movieHandler = require('./modules/movies.js')
 
@@ -26,12 +25,9 @@ server.get('/', (req, res) => {
 });
 
 
-
-
 server.get('*', (req, res) => {
     res.send('not found');
 })
-
 
 
 server.listen(PORT, () => {
