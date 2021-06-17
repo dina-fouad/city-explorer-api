@@ -27,6 +27,7 @@ server.get('/', (req, res) => {
 
 
 
+
 server.get('*', (req, res) => {
     res.send('not found');
 })
