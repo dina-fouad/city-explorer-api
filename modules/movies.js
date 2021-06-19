@@ -27,6 +27,7 @@ function movieHandler(req, res) {
             const movieArray = result.data.results.map(movieItem => {
                 return new Movie(movieItem);
             })
+            inMemory[movieQuery]=movieArray
             res.send(movieArray);
         })
         .catch(err => {
