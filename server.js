@@ -1,35 +1,46 @@
-'use strict';
+'use strict'
 
 require('dotenv').config();
 const express = require('express');
-// const weatherData = require('./data/weather.json');
-const cors = require('cors');
-// const axios = require('axios');
-
+const weather = require('./data/weather.json')
 const server = express();
+const cors = require('cors'); 
+server.use(cors());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3065;
 
-server.use(cors());//my server can get any req from any clinet
 
-const weatherHandler = require('./modules/weather.js');
-const movieHandler = require('./modules/movies.js')
+server.get('/',(req,res)=>{
+    res.send('dina')
+})
 
-//localhost:3065/
-server.get('/weather', weatherHandler);
-server.get('/movie', movieHandler)
+server.get('/weather',handle);
+function handle(request, response) {
+    let searchQuery = request.query.searchQuery;
+    const city = weather.find(city => city.city_name.toLowerCase() === searchQuery.toLowerCase());
+    if(city != undefined)
+    {
+      const weatherArray = city.data.map(day => new Forecast(day));
+      response.status(200).send(weatherArray);
+    }
+    else
+    {
+      errorHandler(response);
+    }
+  }
 
-server.get('/', (req, res) => {
-    let str = 'hello from backend';
-    res.send(str);
-});
+  function Forecast(day) {
+    this.date = day.valid_date
+    this.description = day.weather.description
+  }
+
+
 
 
 server.get('*', (req, res) => {
     res.send('not found');
 })
 
-
-server.listen(PORT, () => {
-    console.log(`Listening to PORT ${PORT}`);
+server.listen(PORT,() =>{
+    console.log(`listening on PORT ${PORT}`);
 })

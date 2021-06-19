@@ -1,30 +1,30 @@
 # city-explorer-api
 
-
-
+# class7
 
 **Author**: dina albarghouthi
 **Version**: 1.0.0 
 
 ## Overview
-This is an Express API server.
+Building a React application that uses the Axios library to make user-initiated reqeusts for data from a thrid-party API
 
 ## Getting Started
-Clone this repo to your local machine. Open the terminal and run npm i Run npm start
+useing React and axios
 
 ## Architecture
-ExpressJS dotenv library cors library
+axios React JS
+
 
 
 
 Name of feature:react and axios
 
-Estimate of time needed to complete: 5h
+Estimate of time needed to complete: 2:30h
 
-Start time: 2:00
+Start time: 2:30
 
-Finish time: 8:30
-Actual time needed to complete: 7
+Finish time: 4:40
+Actual time needed to complete: 2
 
 https://trello.com/b/BQQU07LZ/axios
  https://dina12.herokuapp.com/
